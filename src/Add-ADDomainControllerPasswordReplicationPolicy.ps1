@@ -43,7 +43,7 @@ Get-ADDomainController
 Get-ADDomainControllerPasswordReplicationPolicy
 #>
 function Add-ADDomainControllerPasswordReplicationPolicy {
-    [CmdletBinding(DefaultParameterSetName='AllowedPRP', SupportsShouldProcess=$true, ConfirmImpact='Medium')]
+    [CmdletBinding(SupportsShouldProcess=$true, ConfirmImpact='Medium')]
     param (
         [Parameter(Mandatory=$true, ValueFromPipeline=$false)]
         [ADPrincipal[]]$AllowedList,
